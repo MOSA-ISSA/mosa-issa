@@ -9,8 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "react": "19.0.0-rc-66855b96-20241106",
-    "react-dom": "19.0.0-rc-66855b96-20241106",
-    "next": "15.0.3"
+    "motion": "12.0.0-alpha.2",
+    "next": "15.0.3",
+    "react": "19.0.0-rc-fb9a90fa48-20240614",
+    "react-dom": "19.0.0-rc-fb9a90fa48-20240614"
+  },
+  "devDependencies": {
+    "@types/node": "22.9.3",
+    "@types/react": "18.3.12",
+    "typescript": "5.7.2"
   }
 }
