@@ -4,6 +4,7 @@ import React from 'react';
 import styles from './Skills.module.css';
 import { FaReact, FaNodeJs, FaDatabase, FaGithub, FaHtml5, FaCss3Alt, FaJsSquare } from 'react-icons/fa';
 import { SiMongodb, SiTailwindcss, SiNextdotjs, SiWordpress } from 'react-icons/si';
+import { Page } from '../theme/elements';
 
 const skills = [
     {
@@ -35,7 +36,7 @@ const skills = [
 
 const Skills = () => {
     return (
-        <div className={styles.skillsContainer}>
+        <Page>
             <h1 className={styles.title}>Skills & Expertise</h1>
             {skills.map((section, index) => (
                 <div key={index} className={styles.skillSection}>
@@ -51,7 +52,7 @@ const Skills = () => {
                     </div>
                 </div>
             ))}
-        </div>
+        </Page>
     );
 };
 

@@ -59,7 +59,7 @@ export default function Index() {
     }, []);
 
     const scrollToSection = (sectionRef, title) => {
-        // window.location.hash = `#${title?.replace(' ', '-').toLowerCase()}`;
+        window.location.hash = `#${title?.replace(' ', '-').toLowerCase()}`;
         sectionRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 

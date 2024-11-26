@@ -1,7 +1,5 @@
 import React, { useContext, } from 'react';
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
-import { SiGmail } from "react-icons/si";
 import { H1, P } from '../theme/elements';
 import TheContext from '../hooks/TheContext';
 import { Links } from '../res/data';

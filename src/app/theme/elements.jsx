@@ -6,6 +6,7 @@ export const Page = styled.div`
     display: flex;
     flex: 1;
     height: 100dvh;
+    width: 100%;
     flex-direction: column;
     margin: 0px;
     padding: 0px;
