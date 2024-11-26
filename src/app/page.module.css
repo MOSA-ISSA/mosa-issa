@@ -3,11 +3,7 @@
   display: flex;
   position: absolute;
   width: 100%;
-  /* top: 0; */
-  /* left: 0; */
-  /* right: 0; */
-  /* background-color: white; */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 1);
   padding: 1rem;
   z-index: 1000;
   flex-direction: row;
@@ -15,6 +11,39 @@
   justify-items: center;
   justify-content: center;
   gap: 1rem;
+  border-radius: 0px 0px 10px 10px;
+
+  @media screen and (max-width: 550px) {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    justify-content: space-between;
+  }
+}
+
+.headerTitle {
+  display: none;
+  @media screen and (max-width: 550px) {
+    display: block;
+  }
+}
+
+.sky {
+  background: linear-gradient(180deg,
+      #87CEEB 0%,
+      #4682B4 30%,
+      #1E90FF 60%,
+      #00BFFF 100%);
+  background-size: 400% 400%;
+  animation: gradientSkyMotion 15s ease infinite;
+}
+
+.space {
+  background: linear-gradient(180deg,
+      #0C0032,
+      #190061,
+      #240090,
+      #3500D3);
+  background-size: 400% 400%;
+  animation: gradientSpaceMotion 20s ease infinite;
 }
 
 .navList {
@@ -23,7 +52,14 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 550px) {
+    display: none;
+  }
+
+  ;
 }
 
 .navButton {
@@ -46,13 +82,11 @@
 }
 
 .sectionsContainer {
-  /* padding-top: 5rem; */
   flex: 1;
 }
 
 .contentSection {
   min-height: 100vh;
-  /* padding: 2rem; */
 }
 
 .contentSection h2 {
@@ -61,7 +95,6 @@
   margin-bottom: 1rem;
 }
 
-/* Footer Styles */
 .footer {
   background-color: #1f2937;
   color: white;
@@ -125,10 +158,6 @@
   .navButton {
     /* padding: 0.25rem 0.5rem; */
     font-size: 0.875rem;
-  }
-
-  .contentSection {
-    /* padding: 1rem; */
   }
 
   .footerContent {

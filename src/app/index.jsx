@@ -1,11 +1,15 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import styles from './page.module.css';
 import { Page, Button } from './theme/elements';
 import { pages } from './res/data';
 import ThemeSwitch from './components/ThemeSwitch';
+import TheContext from './hooks/TheContext';
+import { CiMenuBurger } from "react-icons/ci";
+import Menu from './components/Menu';
 
 export default function Index() {
+    const { isDark } = useContext(TheContext);
     const [activeSection, setActiveSection] = useState('section1');
 
     pages.forEach((page) => {
@@ -65,7 +69,7 @@ export default function Index() {
                 <Button
                     onClick={() => scrollToSection(page.sectionRef, page.title)}
                     className={`
-                        ${styles.navButton} 
+                        ${styles.navButton}
                         ${activeSection === `section${index + 1}` ? styles.active : ''}`
                     }
                 >
@@ -89,11 +93,15 @@ export default function Index() {
 
     const Header = () => {
         return (
-            <nav className={styles.navbar}>
+            <nav className={`${styles.navbar} ${isDark ? styles.space : styles.sky}`}>
                 <ThemeSwitch />
-                {/* test */}
-                <ul className={styles.navList}>{RenderNavBar()}</ul>
-                {/* test */}
+                <ul className={styles.navList}>
+                    {RenderNavBar()}
+                </ul>
+                <div className={styles.headerTitle}>
+                    mosa issa
+                </div>
+                <Menu menuOptions={pages} scrollToSection={scrollToSection} />
             </nav>
         )
     }

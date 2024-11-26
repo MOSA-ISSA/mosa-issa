@@ -12,6 +12,20 @@ export const Page = styled.div`
     transition: all 0.3s ease;
 `;
 
+export const cover = styled.div`
+    background-color: linear-gradient(
+        180deg, 
+        ${(props) => props.theme.sky4} 0%, 
+        ${(props) => props.theme.sky3} 10%, 
+        ${(props) => props.theme.sky2} 20%, 
+        ${(props) => props.theme.sky1} 30%
+    );
+    color: ${(props) => props.theme.text};
+    margin: 0px;
+    padding: 0px;
+    transition: all 0.3s ease;
+`;
+
 export const Container = styled.div`
     background-color: ${(props) => props.theme.body};
     color: ${(props) => props.theme.text};
@@ -27,7 +41,7 @@ export const Button = styled.button`
     border: none;
     border-radius: 0.25rem;
     padding: 0.5rem 1rem;
-    font-size: 1rem;
+    font-size: clamp(10px, 1vw, 16px);
     cursor: pointer;
     transition: all 0.3s ease;
     &:hover {
@@ -38,14 +52,15 @@ export const Button = styled.button`
 
 export const H1 = styled.h1`
     color: ${(props) => props.theme.text};
-    font-size: 3rem;
-    // font-size: clamp(1.5rem, 5vw, 3rem);
+    font-size: clamp(26px, 5vw, 50px);
     margin: 0px;
-    padding: 0px;
+    padding: 5px;
     transition: all 0.3s ease;
-    textShadow: '1px 1px 2px rgba(255,255,255,5)';
-    -webkit-text-stroke: 1.5px black;
-    text-stroke: 2px black;
+    textShadow: 2px #000000;
+    // -webkit-text-stroke: 1px black;
+    // text-stroke: 1px black;
+    background-color: ${(props) => `${props.theme.body}80`};
+    border-radius: 10px;
     &:hover {
         font-size: 4rem;
         color: ${(props) => props.theme.button};
@@ -66,3 +81,16 @@ export const P = styled.p`
         color: ${(props) => props.theme.button};
     }
 `;
+
+export const Text = styled.div`
+    color: ${(props) => props.theme.text2};
+`
+
+export const Dot = styled.div`
+    background-color: ${(props) => `${props.theme.text}50`};
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+`

@@ -3,13 +3,6 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* --background: #0a0a0a; */
-    /* --foreground: #ededed; */
-  }
-}
-
 html,
 body {
   max-width: 100vw;
@@ -35,12 +28,6 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    /* color-scheme: dark; */
-  }
-}
-
 .profileImage {
   &:hover {
     transform: scale(1.1);
@@ -50,6 +37,14 @@ a {
 }
 
 .link {
+  padding: 1.2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   &:hover {
     transform: scale(1.3);
   }

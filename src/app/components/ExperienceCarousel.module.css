@@ -1,0 +1,102 @@
+.wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    gap: 2rem;
+    max-width: 90dvw;
+    border: 2px solid #00000020;
+    border-radius: 10px;
+    padding: 1rem;
+    max-height: 200px;
+
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    /* border: 2px solid #fff; */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    /* aspect-ratio: 1 / 1; */
+    height: 20dvw;
+    width: 20dvw;
+    max-height: 150px;
+    max-width: 150px;
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.focusedCard {
+    transform: scale(1.1);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.7);
+}
+
+.dots {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #00000050;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.activeDot {
+    width: 12px;
+    height: 12px;
+    background-color: #000000;
+    transition: all 0.3s ease;
+}
+
+.icon {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    font-size: 100%;
+    margin-bottom: 1rem;
+    /* border-radius: 50%; */
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    font-size: 5vw;
+}
+
+.text {
+    display: flex;
+    flex: 0.2;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: clamp(12px, 1vw, 16px);
+    text-align: center;
+}

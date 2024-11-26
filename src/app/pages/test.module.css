@@ -1,0 +1,142 @@
+/* Sky Background Variations */
+.sky-background {
+    background: linear-gradient(180deg,
+            #87CEEB 0%,
+            /* Light Sky Blue */
+            #4682B4 30%,
+            /* Steel Blue */
+            #1E90FF 60%,
+            /* Dodger Blue */
+            #00BFFF 100%
+            /* Deep Sky Blue */
+        );
+    background-size: 400% 400%;
+    animation: gradientSkyMotion 15s ease infinite;
+}
+
+/* Animated Sky Gradient */
+@keyframes gradientSkyMotion {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Space Background Variations */
+.space-background {
+    background: linear-gradient(45deg,
+            #0C0032,
+            /* Deep Midnight Blue */
+            #190061,
+            /* Dark Violet */
+            #240090,
+            /* Deep Purple */
+            #3500D3
+            /* Vivid Purple */
+        );
+    background-size: 400% 400%;
+    animation: gradientSpaceMotion 20s ease infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Starry Space Effect */
+.space-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        radial-gradient(#ffffff 1px, transparent 1px),
+        radial-gradient(#ffffff 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: 0 0, 25px 25px;
+    opacity: 0.3;
+    animation: twinkle 3s infinite alternate;
+}
+
+@keyframes gradientSpaceMotion {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 0.6;
+    }
+}
+
+/* Advanced Space Background with Particle Effect */
+.advanced-space-background {
+    background: linear-gradient(135deg,
+            #000022,
+            /* Very Dark Navy */
+            #00004D,
+            /* Dark Navy */
+            #000080,
+            /* Navy Blue */
+            #4B0082
+            /* Indigo */
+        );
+    background-size: 400% 400%;
+    position: relative;
+    animation: gradientSpaceMotion 15s ease infinite;
+}
+
+.advanced-space-background::before,
+.advanced-space-background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        radial-gradient(#ffffff 1px, transparent 1px),
+        radial-gradient(#ffffff 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: 0 0, 25px 25px;
+    opacity: 0.3;
+}
+
+.advanced-space-background::before {
+    animation: twinkle 3s infinite alternate;
+}
+
+.advanced-space-background::after {
+    background-size: 100px 100px;
+    opacity: 0.1;
+    animation: twinkle 5s infinite alternate-reverse;
+}
+
+/* Responsive Fullscreen Background */
+.fullscreen-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}

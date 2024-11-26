@@ -4,6 +4,8 @@ import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { H1, P } from '../theme/elements';
 import TheContext from '../hooks/TheContext';
+import { Links } from '../res/data';
+import ExperienceCarousel from './../components/ExperienceCarousel';
 
 const lightCoverImage = "https://wallpaperaccess.com/full/478295.jpg"
 const darkCoverImage = "https://wallpapercave.com/wp/wp7051639.jpg"
@@ -45,7 +47,7 @@ const Home = () => {
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.2, duration: 0.8 }}
                     >
-                        <H1 style={{ fontSize: '2rem', }}>+972543938366</H1>
+                        <H1 style={{ fontSize: 'clamp(18px, 4vw, 35px)', }}>+972543938366</H1>
                     </motion.div>
                 </div>
             </motion.div>
@@ -53,53 +55,16 @@ const Home = () => {
     }
 
     const Footer = () => {
-        const data = [
-            {
-                name: 'GitHub',
-                icon: ()=><FaGithub />,
-                link: 'https://github.com/MOSA-ISSA',
-                color: '#000000',
-                background: '#f3f3f3'
-            },
-            {
-                name: 'LinkedIn',
-                icon: ()=><FaLinkedin />,
-                link: 'https://www.linkedin.com/in/mosa-issa-858433262/',
-                color: '#ffffff',
-                background: '#0077b5'
-            },
-            {
-                name: 'WhatsApp',
-                icon: ()=><FaWhatsapp />,
-                link: 'https://wa.me/972543938366', // WhatsApp direct link
-                color: '#ffffff',
-                background: '#25D366'
-            },
-            {
-                name: 'Gmail',
-                icon: ()=><SiGmail />,
-                link: 'mailto:mosasenio@gmail.com', // Email link
-                color: '#ffffff',
-                background: '#D44638'
-            }
-        ];
+
 
         return (
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6, duration: 0.8 }}
-                style={{
-                    display: 'flex',
-                    flex:1,
-                    gap: '1rem',
-                    justifyContent: 'center',
-                    alignItems: 'flex-end',
-                    padding: '1rem',
-                    flexWrap: 'wrap',
-                }}
+                style={styles.linksContainer}
             >
-                {data.map((item, index) => (
+                {Links.map((item, index) => (
                     <a
                         className='link'
                         key={index}
@@ -107,17 +72,8 @@ const Home = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{
-                            textDecoration: 'none',
-                            padding: '1.2rem',
-                            borderRadius: '50%',
                             background: item.background,
                             color: item.color,
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            fontSize: '1.5rem',
-                            transition: 'transform 0.3s, box-shadow 0.3s',
-                            boxShadow: `0 4px 6px rgba(0, 0, 0, 0.1)`,
                         }}
                     >
                         {item.icon()}
@@ -127,6 +83,23 @@ const Home = () => {
         );
     };
 
+    const Content = () => {
+        return (
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.4, duration: 0.8 }}
+                style={styles.content}
+            >
+                <P>
+                    Full Stack Developer specializing in React, React Native, Node.js, and MongoDB.
+                    Passionate about creating seamless user experiences and scalable web solutions.
+                </P>
+                <ExperienceCarousel />
+            </motion.div>
+        )
+    }
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -134,27 +107,10 @@ const Home = () => {
             transition={{ duration: 1 }}
             style={styles.page}
         >
-
             <HedProfile />
-
-
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.4, duration: 0.8 }}
-                style={{
-                    fontSize: '1.2rem',
-                    maxWidth: '600px',
-                    marginBottom: '2rem',
-                }}
-            >
-                <P>
-                    Full Stack Developer specializing in React, React Native, Node.js, and MongoDB.
-                    Passionate about creating seamless user experiences and scalable web solutions.
-                </P>
-            </motion.div>
-
+            <Content />
             <Footer />
+
         </motion.div>
     );
 };
@@ -168,18 +124,16 @@ const styles = {
         flexDirection: 'column',
         height: '100dvh',
         width: '100%',
-        color: '#fff',
         textAlign: 'center',
         padding: '2rem',
     },
     HedProfile: {
         marginTop: '2rem',
-        marginBottom: '2rem',
         display: 'flex',
-        flex: 0.5,
+        flex: 2,
+        maxHeight: '270px',
         alignItems: 'flex-end',
         flexDirection: 'row',
-        gap: '2rem',
         justifyContent: 'flex-start',
         width: '100%',
         backgroundSize: 'cover',
@@ -188,10 +142,15 @@ const styles = {
         padding: '2rem',
         borderRadius: '20px',
         transition: 'all 0.5s ease',
+        flexWrap: 'wrap',
     },
     profileImage: {
-        width: '200px',
-        height: '200px',
+        width: '20dvw',
+        height: '20dvw',
+        minHeight: '85px',
+        minWidth: '85px',
+        maxHeight: '250px',
+        maxWidth: '250px',
         borderRadius: '50%',
         overflow: 'hidden',
         border: '2px solid #00000050',
@@ -206,5 +165,26 @@ const styles = {
         justifyContent: 'space-between',
         alignItem: 'center',
         alignItems: 'center',
-    }
+        gap: '1rem',
+    },
+    linksContainer: {
+        display: 'flex',
+        flex: 1,
+        gap: '1rem',
+        justifyContent: 'center',
+        alignItems: 'flex-end',
+        padding: '1rem',
+        flexWrap: 'wrap',
+        // border: '5px solid #fff',
+    },
+    content: {
+        display: 'flex',
+        flex: 3,
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: '1rem',
+        flexWrap: 'wrap',
+        // border: '5px solid #fff',
+    },
 }
