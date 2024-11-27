@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { FaCss3Alt, FaGithub, FaHtml5, FaJsSquare, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import AboutMe from "../pages/AboutMe";
 import ContactMe from "../pages/ContactMe";
 import Home from "../pages/Home";
@@ -16,7 +16,11 @@ import {
     SiPostman,
     SiVite,
     SiRender,
-    SiVercel
+    SiVercel,
+    SiNextdotjs,
+    SiStyledcomponents,
+    SiFramer,
+    SiTailwindcss
 } from 'react-icons/si';
 
 export const lightCoverImage = "https://wallpaperaccess.com/full/478295.jpg"
@@ -28,7 +32,7 @@ export const pages = [
     { title: 'Projects', content: () => <Projects /> },
     { title: 'Skills', content: () => <Skills /> },
     { title: 'About Me', content: () => <AboutMe /> },
-    { title: 'Contact Me', content: () => <ContactMe /> }
+    // { title: 'Contact Me', content: () => <ContactMe /> }
 ];
 
 export const Links = [
@@ -185,3 +189,65 @@ export const projects = [
         achievements: 'Implemented advanced filtering and sorting capabilities with a smooth user experience, making it easier for users to manage their gaming libraries.'
     }
 ];
+
+export const skills = [
+    {
+        category: "Frontend Development",
+        items: [
+            { name: "React Native", icon: <FaReact />, level: "Expert" },
+            { name: "javaScript", icon: <IoLogoJavascript />, level: "Expert" },
+            { name: "React", icon: <FaReact />, level: "Expert" },
+            { name: "Next.js", icon: <SiNextdotjs />, level: "Advanced" },
+            { name: "HTML", icon: <FaHtml5 />, level: "Expert" },
+            { name: "CSS", icon: <FaCss3Alt />, level: "Expert" },
+            { name: "JavaScript", icon: <FaJsSquare />, level: "Expert" },
+            { name: "Vite", icon: <SiVite />, level: "Intermediate" },
+            { name: "Expo", icon: <SiExpo />, level: "Intermediate" },
+        ],
+    },
+    {
+        category: "Backend Development",
+        items: [
+            { name: "Node.js", icon: <FaNodeJs />, level: "Advanced" },
+            { name: "MongoDB", icon: <SiMongodb />, level: "Intermediate" },
+            { name: "Postman", icon: <SiPostman />, level: "Intermediate" },
+            { name: "render", icon: <SiRender />, level: "Intermediate" },
+            { name: "Vercel", icon: <SiVercel />, level: "Advanced" },
+        ],
+    },
+    {
+        category: "Tools & Platforms",
+        items: [
+            { name: "GitHub", icon: <FaGithub />, level: "Expert" },
+            { name: "Asana", icon: <SiAsana />, level: "Expert" },
+            { name: "WordPress", icon: <SiWordpress />, level: "Intermediate" },
+        ],
+    },
+];
+
+/*
+{ name: "Styled Components", icon: <SiStyledcomponents />, level: "Intermediate" },
+            { name: "Framer Motion", icon: <SiFramer />, level: "Intermediate" },
+            { name: "React Query", icon: <FaReact />, level: "Intermediate" },
+            { name: "React Hook Form", icon: <FaReact />, level: "Intermediate" },
+            { name: "React Context", icon: <FaReact />, level: "Intermediate" },
+            { name: "React Toastify", icon: <FaReact />, level: "Intermediate" },
+            { name: "React Select", icon: <FaReact />, level: "Intermediate" },
+            { name: "React Table", icon: <FaReact />, level: "Intermediate" },
+            { name: "React Native Navigation", icon: <FaReact />, level: "Intermediate" },
+            { name: "React Native Gesture Handler", icon: <FaReact />, level: "Intermediate" },
+            { name: "React Native Reanimated", icon: <FaReact />, level: "Intermediate" },
+            { name: "React Native Paper", icon: <FaReact />, level: "Intermediate" },
+            { name: "React Native Web", icon: <FaReact />, level: "Intermediate" },
+            { name: "React Native Modal", icon: <FaReact />, level: "Intermediate" },
+            { name: "React Native Bottom Sheet", icon: <FaReact />, level: "Intermediate" },
+            { name: "React Native Reanimated", icon: <FaReact />, level: "Intermediate" },
+            { name: "React Native Gesture Handler", icon: <FaReact />, level: "Intermediate" },
+            { name: "React Native Paper", icon: <FaReact />, level: "Intermediate" },
+            { name: "React Native Web", icon: <FaReact />, level: "Intermediate" },
+            { name: "React Native Modal", icon: <FaReact />, level: "Intermediate" },
+            { name: "React Native Bottom Sheet", icon: <FaReact />, level: "Intermediate" },
+            { name: "React Native Reanimated", icon: <FaReact />, level: "Intermediate" },
+            { name: "React Native Gesture Handler", icon: <FaReact />, level: "Intermediate" },
+            { name: "React Native Paper", icon: <FaReact />, level: "Intermediate" },
+*/

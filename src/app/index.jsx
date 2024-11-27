@@ -117,10 +117,12 @@ export default function Index() {
             <footer className={styles.footer}>
                 <div className={styles.footerContent}>
                     <div className={styles.footerSection}>
-                        <p className={styles.copyright}>© 2024 Mosa Issa. جميع الحقوق محفوظة</p>
+                        <p className={styles.copyright}>© 2024 Mosa Issa. All rights reserved</p>
                     </div>
                     <div className={styles.footerSection}>
-                        <p className={styles.quote}>"لا تقل مستحيل، قل سأحاول"</p>
+                        <p className={styles.quote}>
+                            "The best way to predict the future is to create it"
+                        </p>
                     </div>
                     <div className={styles.footerSection}>
                         <div className={styles.socialLinks}>
