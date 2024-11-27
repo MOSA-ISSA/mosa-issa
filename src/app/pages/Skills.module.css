@@ -1,10 +1,5 @@
-.skillsContainer {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 .title {
+    margin-top: 68px;
     text-align: center;
     font-size: 2.5rem;
     font-weight: bold;
@@ -23,17 +18,28 @@
     color: #555;
 }
 
-.skillsGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1.5rem;
+.skillsContainer {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
 }
 
 .skillCard {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
+    height: 20dvw;
+    width: 20dvw;
+    max-width: 200px;
+    max-height: 200px;
+    min-width: 120px;
+    min-height: 120px;
+    margin: 10px;
     border-radius: 8px;
-    padding: 1rem;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;

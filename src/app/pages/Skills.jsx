@@ -4,7 +4,7 @@ import React from 'react';
 import styles from './Skills.module.css';
 import { FaReact, FaNodeJs, FaDatabase, FaGithub, FaHtml5, FaCss3Alt, FaJsSquare } from 'react-icons/fa';
 import { SiMongodb, SiTailwindcss, SiNextdotjs, SiWordpress } from 'react-icons/si';
-import { Page } from '../theme/elements';
+import { Page, ThemeDiv } from '../theme/elements';
 
 const skills = [
     {
@@ -41,13 +41,14 @@ const Skills = () => {
             {skills.map((section, index) => (
                 <div key={index} className={styles.skillSection}>
                     <h2 className={styles.categoryTitle}>{section.category}</h2>
-                    <div className={styles.skillsGrid}>
+                    <div className={styles.skillsContainer}>
                         {section.items.map((skill, idx) => (
-                            <div key={idx} className={styles.skillCard}>
+                            <ThemeDiv
+                                key={idx} className={styles.skillCard}>
                                 <div className={styles.icon}>{skill.icon}</div>
                                 <h3 className={styles.skillName}>{skill.name}</h3>
                                 <p className={styles.skillLevel}>{skill.level}</p>
-                            </div>
+                            </ThemeDiv>
                         ))}
                     </div>
                 </div>
