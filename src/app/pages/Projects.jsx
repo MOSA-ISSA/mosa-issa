@@ -2,64 +2,69 @@ import React, { useState } from 'react';
 import { projects } from '../res/data';
 import { motion } from 'framer-motion';
 import styles from './Projects.module.css';
-import { Page } from '../theme/elements';
+import { Button, Page, ThemeDiv } from '../theme/elements';
+import { FaGithub, FaPlay } from 'react-icons/fa';
 
-const Projects = () => {
-    const [hoveredImageIndex, setHoveredImageIndex] = useState(null);
+const ProjectCard = (project) => {
 
     return (
-        <Page>
-            <h1 className={styles.title}>My Projects</h1>
-            <div className={styles.projectsGrid}>
-                {projects.map((project, projectIndex) => (
-                    <div
-                        key={projectIndex}
-                        className={styles.projectCard}
-                        onMouseEnter={() => setHoveredImageIndex(projectIndex)}
-                        onMouseLeave={() => setHoveredImageIndex(null)}
+        <motion.div
+            className={styles.projectCard}
+            whileHover={{ scale: 1.1, opacity: 1 }}
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.3 }}
+        // onClick={navigateToAbout}
+        >
+            <ThemeDiv className={styles.grow}>
+                <motion.div
+                    className={styles.imageContainer}
+                    initial={{ opacity: 0.8 }}
+                    whileHover={{ scale: 1.1, opacity: 1 }}
+                >
+                    <img
+                        src={project.images[0]}
+                        alt={project.name}
+                        className={styles.projectImage}
+                    />
+                </motion.div>
+                <h2 className={styles.projectName}>
+                    {project.name}
+                </h2>
+                <div className={styles.projectLinks}>
+                    <Button
+                        onClick={() => window.open(project.gitHubLink, '_blank')}
+                        className={styles.projectLink}
                     >
-                        <motion.div
-                            className={styles.imageContainer}
-                            initial={{ opacity: 0.8 }}
-                            whileHover={{ scale: 1.1, opacity: 1 }}
-                        >
-                            <img
-                                src={
-                                    hoveredImageIndex === projectIndex
-                                        ? project.images[1] || project.images[0]
-                                        : project.images[0]
-                                }
-                                alt={project.name}
-                                className={styles.projectImage}
-                            />
-                        </motion.div>
-                        <div className={styles.projectDetails}>
-                            <h2 className={styles.projectName}>{project.name}</h2>
-                            <p className={styles.projectAbout}>{project.about}</p>
-                            <div className={styles.projectLinks}>
-                                <a
-                                    href={project.gitHubLink}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className={styles.link}
-                                >
-                                    GitHub
-                                </a>
-                                {project.liveLink && (
-                                    <a
-                                        href={project.liveLink}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className={styles.link}
-                                    >
-                                        Live Demo
-                                    </a>
-                                )}
-                            </div>
-                        </div>
-                    </div>
+                        <FaGithub /> Github
+                    </Button>
+                    <Button
+                        onClick={() => window.open(project.demoLink, '_blank')}
+                        className={styles.projectLink}
+                    >
+                        <FaPlay /> try demo
+                    </Button>
+                </div>
+            </ThemeDiv>
+        </motion.div>
+    )
+}
+
+const Projects = () => {
+
+    return (
+        <Page >
+            <h1 className={styles.title}>My Projects</h1>
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.5 }}
+                className={styles.projectsContainer}
+            >
+                {projects.map((project, index) => (
+                    <ProjectCard key={index} {...project} />
                 ))}
-            </div>
+            </motion.div>
         </Page>
     );
 };

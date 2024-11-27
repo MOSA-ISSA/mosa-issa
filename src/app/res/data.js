@@ -19,6 +19,10 @@ import {
     SiVercel
 } from 'react-icons/si';
 
+export const lightCoverImage = "https://wallpaperaccess.com/full/478295.jpg"
+export const darkCoverImage = "https://wallpapercave.com/wp/wp7051639.jpg"
+export const funnyImage = "https://i.pinimg.com/originals/11/68/1b/11681b40c7ae84daef0477dda290da9b.gif"
+
 export const pages = [
     { title: 'Home', content: () => <Home /> },
     { title: 'Projects', content: () => <Projects /> },

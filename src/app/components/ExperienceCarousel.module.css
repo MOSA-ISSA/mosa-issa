@@ -60,6 +60,7 @@
     gap: 0.5rem;
     justify-content: center;
     align-items: center;
+    height: 20px;
 }
 
 .dot {

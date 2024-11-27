@@ -1,13 +1,9 @@
 import React, { useContext, } from 'react';
 import { motion } from "framer-motion";
-import { H1, P } from '../theme/elements';
+import { H1, P, Page } from '../theme/elements';
 import TheContext from '../hooks/TheContext';
-import { Links } from '../res/data';
+import { darkCoverImage, lightCoverImage, Links } from '../res/data';
 import ExperienceCarousel from './../components/ExperienceCarousel';
-
-const lightCoverImage = "https://wallpaperaccess.com/full/478295.jpg"
-const darkCoverImage = "https://wallpapercave.com/wp/wp7051639.jpg"
-const funnyImage = "https://i.pinimg.com/originals/11/68/1b/11681b40c7ae84daef0477dda290da9b.gif"
 
 const Home = () => {
     const { isDark } = useContext(TheContext)
@@ -53,8 +49,6 @@ const Home = () => {
     }
 
     const Footer = () => {
-
-
         return (
             <motion.div
                 initial={{ opacity: 0 }}
@@ -99,17 +93,19 @@ const Home = () => {
     }
 
     return (
-        <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-            style={styles.page}
-        >
-            <HedProfile />
-            <Content />
-            <Footer />
+        <Page>
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+                style={styles.page}
+            >
+                <HedProfile />
+                <Content />
+                <Footer />
 
-        </motion.div>
+            </motion.div>
+        </Page>
     );
 };
 

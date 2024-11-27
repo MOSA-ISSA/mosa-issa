@@ -13,17 +13,17 @@ export const Page = styled.div`
     transition: all 0.3s ease;
 `;
 
-export const cover = styled.div`
-    background-color: linear-gradient(
-        180deg, 
-        ${(props) => props.theme.sky4} 0%, 
-        ${(props) => props.theme.sky3} 10%, 
-        ${(props) => props.theme.sky2} 20%, 
-        ${(props) => props.theme.sky1} 30%
+export const ThemeDiv = styled.div`
+    background: linear-gradient(
+        ${(props) => props.theme.deg}deg, 
+        ${(props) => props.theme.sky0},
+        ${(props) => props.theme.sky1},
+        ${(props) => props.theme.sky2}, 
+        ${(props) => props.theme.sky3}, 
+        ${(props) => props.theme.sky4} 
     );
+    background-size: 400% 400%;
     color: ${(props) => props.theme.text};
-    margin: 0px;
-    padding: 0px;
     transition: all 0.3s ease;
 `;
 
@@ -36,7 +36,7 @@ export const Container = styled.div`
 `;
 
 export const Button = styled.button`
-    background-color: ${(props) => props.theme.button};
+    background-color: ${(props) => `${props.theme.button}80`};
     color: ${(props) => props.theme.text};
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border: none;

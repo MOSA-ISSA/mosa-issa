@@ -51,3 +51,13 @@ a {
 
   transition: all 0.3s ease;
 }
+
+.page {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 100dvh;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
