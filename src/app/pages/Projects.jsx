@@ -4,8 +4,45 @@ import { motion } from 'framer-motion';
 import styles from './Projects.module.css';
 import { Button, Page, ThemeDiv } from '../theme/elements';
 import { FaGithub, FaPlay } from 'react-icons/fa';
+import { useRouter } from 'next/navigation';
+// import { useRouter } from 'next/router';
 
 const ProjectCard = (project) => {
+    const navigation = useRouter();
+
+    const navigateToProject = () => {
+        navigation.push(`/projects/?name=${project.name}`);
+    };
+
+    const LinkButtons = () => {
+        const onClick = (e, link) => {
+            e.preventDefault();
+            e.stopPropagation();
+            window.open(link, '_blank');
+        };
+
+        return (
+            <div className={styles.projectLinks}>
+                {project.gitHubLink && (
+                    <Button
+                        onClick={(event) => onClick(event, project.gitHubLink)}
+                        className={styles.projectLink}
+                    >
+                        <FaGithub /> Github
+                    </Button>
+                )}
+                {project.demoLink && (
+                    <Button
+                        onClick={(event) => onClick(event, project.demoLink)}
+                        className={styles.projectLink}
+                    >
+                        <FaPlay /> try demo
+                    </Button>
+                )}
+            </div>
+        );
+    };
+
 
     return (
         <motion.div
@@ -14,7 +51,7 @@ const ProjectCard = (project) => {
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.3 }}
-        // onClick={navigateToAbout}
+            onClick={navigateToProject}
         >
             <ThemeDiv className={styles.grow}>
                 <motion.div
@@ -23,7 +60,7 @@ const ProjectCard = (project) => {
                     whileHover={{ scale: 1.1, opacity: 1 }}
                 >
                     <img
-                        src={project.images[0]}
+                        src={project.image}
                         alt={project.name}
                         className={styles.projectImage}
                     />
@@ -31,20 +68,7 @@ const ProjectCard = (project) => {
                 <h2 className={styles.projectName}>
                     {project.name}
                 </h2>
-                <div className={styles.projectLinks}>
-                    <Button
-                        onClick={() => window.open(project.gitHubLink, '_blank')}
-                        className={styles.projectLink}
-                    >
-                        <FaGithub /> Github
-                    </Button>
-                    <Button
-                        onClick={() => window.open(project.demoLink, '_blank')}
-                        className={styles.projectLink}
-                    >
-                        <FaPlay /> try demo
-                    </Button>
-                </div>
+                <LinkButtons />
             </ThemeDiv>
         </motion.div>
     )

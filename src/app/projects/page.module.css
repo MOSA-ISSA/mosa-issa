@@ -1,0 +1,100 @@
+.projectDetails {
+    /* padding-top: 20px; */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+}
+
+.header{
+    display: flex;
+    position: absolute;
+    height: 60px;
+    width: 100%;
+    top: 0px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 10;
+}
+
+.page {
+    display: flex;
+    overflow-y: scroll;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+    max-width: 800px;
+    padding-top: 80px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.page::-webkit-scrollbar {
+    display: none;
+}
+
+.carouselContainer {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    padding: 5px;
+    object-fit: cover;
+}
+
+.info {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.info p {
+    margin: 10px 0;
+    line-height: 1.6;
+    font-size: 1.3rem;
+}
+
+.links {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.linkButton {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #0070f3;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.linkButton:hover {
+    background-color: #005bb5;
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

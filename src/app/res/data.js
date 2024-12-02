@@ -150,8 +150,9 @@ export const experiences = [
 export const projects = [
     {
         name: 'Shift Management',
-        gitHubLink: 'https://github.com/MOSA-ISSA/shift-management',
-        liveLink: 'https://shiftmanagement.example.com', // Replace with actual live link
+        // gitHubLink: 'https://github.com/MOSA-ISSA/shift-management',
+        demoLink: 'https://code-zone-test.onrender.com/',
+        image: 'https://code-zone-test.onrender.com/static/media/logoZone.dd5dc26bc8ce8a4586e8.png',
         images: ['https://wallpaperaccess.com/full/478295.jpg', 'https://wallpaperaccess.com/full/478295.jpg'], // Replace with actual image links
         about: 'A web-based application designed to streamline shift management and project tracking for teams. It provides real-time updates, task assignments, and performance analytics.',
         technologies: ['React', 'Node.js', 'MongoDB', 'CSS', 'JavaScript', 'Vite v6', 'React Router'],
@@ -161,7 +162,8 @@ export const projects = [
     {
         name: 'Educational App',
         gitHubLink: 'https://github.com/MOSA-ISSA/educational-app',
-        liveLink: 'https://educationapp.example.com', // Replace with actual live link
+        demoLink: 'https://educationapp.example.com',
+        image: 'https://wallpaperaccess.com/full/478295.jpg',
         images: ['https://wallpaperaccess.com/full/478295.jpg', 'https://wallpaperaccess.com/full/478295.jpg'], // Replace with actual image links
         about: 'An educational platform allowing teachers to upload materials and assignments, and students to submit tasks and track progress.',
         technologies: ['React Native', 'Expo', 'Node.js', 'MongoDB', 'CSS'],
@@ -171,7 +173,8 @@ export const projects = [
     {
         name: 'Art Store',
         gitHubLink: 'https://github.com/MOSA-ISSA/art-gallery-store',
-        liveLink: 'https://artstore.example.com', // Replace with actual live link
+        demoLink: 'https://artstore.example.com',
+        image: 'https://wallpaperaccess.com/full/478295.jpg',
         images: ['https://wallpaperaccess.com/full/478295.jpg', 'https://wallpaperaccess.com/full/478295.jpg'], // Replace with actual image links
         about: 'An online store for selling and showcasing art pieces, including a seamless shopping experience with secure payment integration.',
         technologies: ['React Native', 'Expo', 'Node.js', 'MongoDB', 'CSS'],
@@ -181,7 +184,8 @@ export const projects = [
     {
         name: 'MGL Game Library',
         gitHubLink: 'https://github.com/MOSA-ISSA/mgl-game-library',
-        liveLink: 'https://mgl.example.com', // Replace with actual live link
+        demoLink: 'https://mgl.example.com',
+        image: 'https://wallpaperaccess.com/full/478295.jpg',
         images: ['https://wallpaperaccess.com/full/478295.jpg', 'https://wallpaperaccess.com/full/478295.jpg'], // Replace with actual image links
         about: 'A game library application inspired by MyAnimeList. Users can organize games they have played, want to play, dropped, or are not interested in. The platform supports reviews and ratings for games.',
         technologies: ['React Native', 'CLI', 'Node.js', 'MongoDB', 'RAWG API'],

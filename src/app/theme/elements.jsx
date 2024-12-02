@@ -9,7 +9,6 @@ export const Page = styled.div`
     width: 100%;
     flex-direction: column;
     margin: 0px;
-    padding: 0px;
     transition: all 0.3s ease;
 `;
 
