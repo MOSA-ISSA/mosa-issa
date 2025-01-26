@@ -16,7 +16,7 @@ const AboutMe = () => {
                 <div className={styles.details}>
                     <div className={styles.imageContainer}>
                         <img
-                            src="https://wallpapercave.com/wp/wp9602502.jpg"
+                            src="https://avatars.githubusercontent.com/u/124443901?u=cab741f1a3029b9592f29e61bb198aad469825fe&v=4"
                             alt="Mosa Issa"
                             className={styles.profileImage}
                         />

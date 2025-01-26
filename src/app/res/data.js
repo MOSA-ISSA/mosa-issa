@@ -149,33 +149,15 @@ export const experiences = [
 
 export const projects = [
     {
-        name: 'Shift Management',
-        // gitHubLink: 'https://github.com/MOSA-ISSA/shift-management',
-        demoLink: 'https://code-zone-test.onrender.com/',
-        image: 'https://code-zone-test.onrender.com/static/media/logoZone.dd5dc26bc8ce8a4586e8.png',
-        images: ['https://wallpaperaccess.com/full/478295.jpg', 'https://wallpaperaccess.com/full/478295.jpg'], // Replace with actual image links
-        about: 'A web-based application designed to streamline shift management and project tracking for teams. It provides real-time updates, task assignments, and performance analytics.',
-        technologies: ['React', 'Node.js', 'MongoDB', 'CSS', 'JavaScript', 'Vite v6', 'React Router'],
-        challenges: 'Ensuring scalability while maintaining real-time updates for multiple users.',
-        achievements: 'Built the project end-to-end with a responsive UI and integrated analytics for improved decision-making.'
-    },
-    {
-        name: 'Educational App',
-        gitHubLink: 'https://github.com/MOSA-ISSA/educational-app',
-        demoLink: 'https://educationapp.example.com',
-        image: 'https://wallpaperaccess.com/full/478295.jpg',
-        images: ['https://wallpaperaccess.com/full/478295.jpg', 'https://wallpaperaccess.com/full/478295.jpg'], // Replace with actual image links
-        about: 'An educational platform allowing teachers to upload materials and assignments, and students to submit tasks and track progress.',
-        technologies: ['React Native', 'Expo', 'Node.js', 'MongoDB', 'CSS'],
-        challenges: 'Implementing file uploads and ensuring compatibility across mobile and web platforms.',
-        achievements: 'Successfully created a cross-platform application with user-friendly features for both teachers and students.'
-    },
-    {
         name: 'Art Store',
         gitHubLink: 'https://github.com/MOSA-ISSA/art-gallery-store',
-        demoLink: 'https://artstore.example.com',
-        image: 'https://wallpaperaccess.com/full/478295.jpg',
-        images: ['https://wallpaperaccess.com/full/478295.jpg', 'https://wallpaperaccess.com/full/478295.jpg'], // Replace with actual image links
+        // demoLink: 'https://artstore.example.com',
+        image: 'https://github.com/MOSA-ISSA/images/blob/master/canvas-48.jpg?raw=true',
+        images: [
+            'https://github.com/MOSA-ISSA/images/blob/master/artstore.png?raw=true',
+            // 'https://wallpaperaccess.com/full/478295.jpg',
+        ],
+        // Replace with actual image links
         about: 'An online store for selling and showcasing art pieces, including a seamless shopping experience with secure payment integration.',
         technologies: ['React Native', 'Expo', 'Node.js', 'MongoDB', 'CSS'],
         challenges: 'Designing a modern and responsive layout for a high-quality user experience.',
@@ -183,15 +165,51 @@ export const projects = [
     },
     {
         name: 'MGL Game Library',
-        gitHubLink: 'https://github.com/MOSA-ISSA/mgl-game-library',
-        demoLink: 'https://mgl.example.com',
-        image: 'https://wallpaperaccess.com/full/478295.jpg',
-        images: ['https://wallpaperaccess.com/full/478295.jpg', 'https://wallpaperaccess.com/full/478295.jpg'], // Replace with actual image links
+        gitHubLink: 'https://github.com/MOSA-ISSA/MGL',
+        // demoLink: 'https://mgl.example.com',
+        image: 'https://github.com/MOSA-ISSA/MGL/blob/local-data/readme/logo.png?raw=true',
+        images: [
+            'https://github.com/MOSA-ISSA/MGL/blob/local-data/readme/list.gif?raw=true',
+            'https://github.com/MOSA-ISSA/MGL/blob/local-data/readme/create-user.gif?raw=true',
+            'https://github.com/MOSA-ISSA/MGL/blob/local-data/readme/fltering.gif?raw=true',
+            "https://github.com/MOSA-ISSA/MGL/blob/local-data/readme/logo.png?raw=true",
+            // 'https://github.com/MOSA-ISSA/MGL/blob/local-data/readme/tags.gif?raw=true',
+            // 'https://github.com/MOSA-ISSA/MGL/blob/local-data/readme/search.gif?raw=true',
+        ],
+        // Replace with actual image links
         about: 'A game library application inspired by MyAnimeList. Users can organize games they have played, want to play, dropped, or are not interested in. The platform supports reviews and ratings for games.',
         technologies: ['React Native', 'CLI', 'Node.js', 'MongoDB', 'RAWG API'],
         challenges: 'Integrating the RAWG API for real-time game data and building a user-friendly game organization feature.',
         achievements: 'Implemented advanced filtering and sorting capabilities with a smooth user experience, making it easier for users to manage their gaming libraries.'
-    }
+    },
+    {
+        name: 'Shift Management',
+        // gitHubLink: 'https://github.com/MOSA-ISSA/shift-management',
+        demoLink: 'https://code-zone-test.onrender.com/',
+        image: 'https://code-zone-test.onrender.com/static/media/logoZone.dd5dc26bc8ce8a4586e8.png',
+        images: [
+
+            "https://media.licdn.com/dms/image/v2/D4E22AQEFpXQlDg4STQ/feedshare-shrink_1280/feedshare-shrink_1280/0/1730668811978?e=1740614400&v=beta&t=wEGijazuqt8s_nhab7juJWJ0umrVuHHL-SE8V2ZHtTg",
+            'https://media.licdn.com/dms/image/v2/D4E22AQHOEY0ofDUyGQ/feedshare-shrink_1280/feedshare-shrink_1280/0/1730668811999?e=1740614400&v=beta&t=lTPY0_q0XWeupqk7YjaddRJVMYqi6c15jl5Kx_EHptE',
+            'https://media.licdn.com/dms/image/v2/D4E22AQF_kDv9sJa0Kw/feedshare-shrink_1280/feedshare-shrink_1280/0/1730668811979?e=1740614400&v=beta&t=OcsxbNKSUfnxAccoLakbb69nVRSqEEHPL5JePfPkSHo',
+        ],
+        // Replace with actual image links
+        about: 'A web-based application designed to streamline shift management and project tracking for teams. It provides real-time updates, task assignments, and performance analytics.',
+        technologies: ['React', 'Node.js', 'MongoDB', 'CSS', 'JavaScript', 'Vite v6', 'React Router'],
+        challenges: 'Ensuring scalability while maintaining real-time updates for multiple users.',
+        achievements: 'Built the project end-to-end with a responsive UI and integrated analytics for improved decision-making.'
+    },
+    {
+        name: 'Educational App',
+        // gitHubLink: 'https://github.com/MOSA-ISSA/educational-app',
+        // demoLink: 'https://educationapp.example.com',
+        image: 'https://code-zone-test.onrender.com/static/media/logoZone.dd5dc26bc8ce8a4586e8.png',
+        images: [], // Replace with actual image links
+        about: 'An educational platform allowing teachers to upload materials and assignments, and students to submit tasks and track progress.',
+        technologies: ['React Native', 'Expo', 'Node.js', 'MongoDB', 'CSS'],
+        challenges: 'Implementing file uploads and ensuring compatibility across mobile and web platforms.',
+        achievements: 'Successfully created a cross-platform application with user-friendly features for both teachers and students.'
+    },
 ];
 
 export const skills = [

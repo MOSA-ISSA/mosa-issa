@@ -58,6 +58,7 @@ const Page = () => {
                         showThumbs={true}
                         autoPlay={true}
                         infiniteLoop={true}
+                        stopOnHover={true}
                     >
                         {project.images.map((img, index) => (
                             <div key={index}>
