@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Page as Cover, H1, Button, ThemeDiv } from '../theme/elements';
 import { projects } from './../res/data';
 import { useSearchParams } from 'next/navigation';
@@ -86,4 +86,10 @@ const Page = () => {
     );
 }
 
-export default Page;
+const PageWrapper = () => (
+    <Suspense fallback={<div>Loading...</div>}>
+        <Page />
+    </Suspense>
+);
+
+export default PageWrapper;
