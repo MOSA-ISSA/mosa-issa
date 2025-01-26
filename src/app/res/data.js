@@ -1,9 +1,9 @@
 import { FaCss3Alt, FaGithub, FaHtml5, FaJsSquare, FaLinkedin, FaWhatsapp } from "react-icons/fa";
-import AboutMe from "../pages/AboutMe";
-import ContactMe from "../pages/ContactMe";
-import Home from "../pages/Home";
-import Projects from "../pages/Projects";
-import Skills from "../pages/Skills";
+import AboutMe from "../pagesSection/AboutMe";
+// import ContactMe from "../pagesSection/ContactMe";
+import Home from "../pagesSection/Home";
+import Projects from "../pagesSection/Projects";
+import Skills from "../pagesSection/Skills";
 import { IoLogoJavascript } from 'react-icons/io';
 import { FaReact, FaNodeJs, } from 'react-icons/fa';
 import { RiNextjsFill } from 'react-icons/ri';
