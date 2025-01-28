@@ -150,7 +150,7 @@ export const experiences = [
 export const projects = [
     {
         name: 'Art Store',
-        gitHubLink: 'https://github.com/MOSA-ISSA/art-gallery-store',
+        gitHubLink: 'https://github.com/MOSA-ISSA/MI.Store',
         // demoLink: 'https://artstore.example.com',
         image: 'https://github.com/MOSA-ISSA/images/blob/master/canvas-48.jpg?raw=true',
         images: [
@@ -216,31 +216,31 @@ export const skills = [
     {
         category: "Frontend Development",
         items: [
-            { name: "React Native", icon: <FaReact />, level: "Expert" },
+            { name: "React Native", icon: <FaReact />, level: "Advanced" },
             { name: "javaScript", icon: <IoLogoJavascript />, level: "Expert" },
-            { name: "React", icon: <FaReact />, level: "Expert" },
+            { name: "React", icon: <FaReact />, level: "Advanced" },
             { name: "Next.js", icon: <SiNextdotjs />, level: "Advanced" },
             { name: "HTML", icon: <FaHtml5 />, level: "Expert" },
             { name: "CSS", icon: <FaCss3Alt />, level: "Expert" },
             { name: "JavaScript", icon: <FaJsSquare />, level: "Expert" },
-            { name: "Vite", icon: <SiVite />, level: "Intermediate" },
-            { name: "Expo", icon: <SiExpo />, level: "Intermediate" },
+            { name: "Vite", icon: <SiVite />, level: "Advanced" },
+            { name: "Expo", icon: <SiExpo />, level: "Advanced" },
         ],
     },
     {
         category: "Backend Development",
         items: [
-            { name: "Node.js", icon: <FaNodeJs />, level: "Advanced" },
-            { name: "MongoDB", icon: <SiMongodb />, level: "Intermediate" },
-            { name: "Postman", icon: <SiPostman />, level: "Intermediate" },
-            { name: "render", icon: <SiRender />, level: "Intermediate" },
+            { name: "Node.js", icon: <FaNodeJs />, level: "Expert" },
+            { name: "MongoDB", icon: <SiMongodb />, level: "Advanced" },
+            { name: "Postman", icon: <SiPostman />, level: "Advanced" },
+            { name: "render", icon: <SiRender />, level: "Advanced" },
             { name: "Vercel", icon: <SiVercel />, level: "Advanced" },
         ],
     },
     {
         category: "Tools & Platforms",
         items: [
-            { name: "GitHub", icon: <FaGithub />, level: "Expert" },
+            { name: "GitHub", icon: <FaGithub />, level: "Advanced" },
             { name: "Asana", icon: <SiAsana />, level: "Expert" },
             { name: "WordPress", icon: <SiWordpress />, level: "Intermediate" },
         ],
